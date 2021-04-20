@@ -42,3 +42,17 @@ Or the shorthand version
   /*JSX code here*/
 </>
 ```
+## Chapter 6 - React State Management
+
+### Intro to hooks
+*Hooks* contain reusable code logic that is separate from the component tree. The all us to hook up functionality to our components. React ships with several built-in hooks we can use out of the box.
+  - useState:  first argument is state value we want to use, the second value is a function that can be called to change the state value
+
+
+  Hooks can cause the component they are a part of to *rerender*.
+
+### State in component trees
+**Not** a good idea to use state in every single component! Easier to manage state from a single location.
+There are several approaches:
+ - State lives in root element and is passed to child components via props  
+ - 
