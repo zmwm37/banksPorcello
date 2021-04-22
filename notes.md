@@ -55,4 +55,13 @@ Or the shorthand version
 **Not** a good idea to use state in every single component! Easier to manage state from a single location.
 There are several approaches:
  - State lives in root element and is passed to child components via props  
- - 
+ - Context: a way to wrap parts of state so they can be passed directly to child components that are far from root of component tree  (function in React called *createContext*). The object contains two components:
+  - Provider:    
+  - Consumer:  
+
+
+### Building Forms
+Ref: an object that stores values for the lifetime of a component. Several use cases, including:
+- accessing a DOM node directly with a ref
+
+Controlled Component: form values are managed by React and not the DOM. The do not require us to use refs.
