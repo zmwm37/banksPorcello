@@ -2,9 +2,14 @@ import React, { createContext, useState , useContext } from 'react';
 import colorData from './color-data.json';
 import { v4 } from 'uuid';
 
+// create context
 const ColorContext = createContext();
+
+// create function to call context
 export const useColors = () => useContext(ColorContext);
 
+// create parent component that is stateful because context provider can't mutate values
+// in context on its own.
 export default function ColorProvider ({ children }) {
   const [colors, setColors] = useState(colorData);
 

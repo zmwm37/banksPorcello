@@ -1,5 +1,7 @@
 # Notes for *Learning React: Modern Patterns for Developing React Apps* by Alex Banks & Eve Porcello
 
+## Chapter 2 -
+
 ## Chapter 3 - Functional Programming
 
 ### Functional Concepts
@@ -45,8 +47,9 @@ Or the shorthand version
 ## Chapter 6 - React State Management
 
 ### Intro to hooks
-*Hooks* contain reusable code logic that is separate from the component tree. The all us to hook up functionality to our components. React ships with several built-in hooks we can use out of the box.
+*Hooks* contain reusable code logic that is separate from the component tree. They allow us to hook up functionality to our components. React ships with several built-in hooks we can use out of the box.
   - useState:  first argument is state value we want to use, the second value is a function that can be called to change the state value
+  - useRef: access the DOM node directly using a *ref*. A *ref* is an object that stores value for lifetime of a component. (e.g. if you want to plug D3 into React, useRef can be helpful for grabbing a DOM element and giving it to D3 to manipulate)
 
 
   Hooks can cause the component they are a part of to *rerender*.
@@ -65,3 +68,18 @@ Ref: an object that stores values for the lifetime of a component. Several use c
 - accessing a DOM node directly with a ref
 
 Controlled Component: form values are managed by React and not the DOM. The do not require us to use refs.
+
+### Context
+
+## Chapter 7 - Enhancing Components with Hooks
+useEffect - a hook to use when a render needs to cause **side effects**.
+
+A Side Effect is something a function does that isn't part of the return
+
+Dependency Array: associate useEffect hooks with specific data changes to control when an effect is invoked.
+In the example below, the effect is only called when the array *val* is changed
+```
+useEffect(() => {
+  console.log(`typing "${val}"`);
+  }, [val]);
+```
