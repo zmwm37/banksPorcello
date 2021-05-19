@@ -1,12 +1,7 @@
 import React from 'react';
 import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom';
-// import {
-//   Home,
-//   About,
-//   Events,
-//   Products,
-//   Contact
-// } from './pages';
+import Home from './Home';
+import About from './About';
 
 export default function App() {
   return (
@@ -44,13 +39,13 @@ export default function App() {
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
+// function Home() {
+//   return <h2>Home</h2>;
+// }
+// 
+// function About() {
+//   return <h2>About</h2>;
+// }
 
 function Users() {
   return <h2>Users</h2>;
